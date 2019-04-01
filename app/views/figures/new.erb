@@ -23,22 +23,17 @@
       <br>
       <br>
       <%Landmark.all.each do |landmark|%>
-        <input type="checkbox" name="figure[landmark_ids][]" id="<%=landmark.id%>" value="<%=landmark.id%>"><%=landmark.name%></input>
+        <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%=landmark.id%>"><%=landmark.name%></input>
       <%end%>
       <br>
       <br>
       <label>Or just create a landmark to go with this figure:</label>
       <br>
       <br>
-      <label>Name:</label>
+      <label>Landmark:</label>
       <br>
-      <input type="text" name="landmark[name]" id="landmark_name">
+      <input type="text" name="landmark[name]" id="new_landmark">
       <br>
       <br>
-      <label>Year Completed:</label>
-      <br>
-      <input type="text" name="landmark[year_completed]" id="year_completed">
-      <br>
-
   <input type="submit" value="Create New Figure">
 </form>
